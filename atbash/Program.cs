@@ -12,7 +12,7 @@ namespace atbash
         
 
         static void Main(string[] args)
-        {
+     
            
 
         }
@@ -32,6 +32,9 @@ namespace atbash
                 }
             }
             return counter;
+
+
+
         }
     }
 }
