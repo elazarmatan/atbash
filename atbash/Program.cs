@@ -30,20 +30,20 @@ namespace atbash
             }
             return finel;
         }
-        
 
-        static void Main(string[] args) 
-        { 
-     
-           
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(manager ());
+
+
 
         }
 
         static int dangerousWords(string mesage, string[] danWor)
         {
 
-            string i = "Lfi ulixvh ziv kivkzirmt uli z nzqli zggzxp lm gsv Arlmrhg vmvnb.Gsv ilxpvg fmrgh ziv ivzwb zmw dzrgrmt uli gsv hrtmzo.Ylnyh szev yvvm kozxvw mvzi pvb olxzgrlmh.Mfpsyz urtsgvih ziv hgzmwrmt yb uli tilfmw rmurogizgrlm.Gsv zggzxp droo yv hfwwvm zmw hgilmt -- gsvb dlm’g hvv rg xlnrmt.Dv nfhg hgzb srwwvm zmw pvvk gsv kozm hvxivg fmgro gsv ozhg nlnvmg.Erxglib rh mvzi. Hgzb ivzw";
-
+           
             int counter = 0;
             List <string> listMesage = new List <string>(mesage.Split (' '));
             foreach (string word in listMesage)
@@ -61,7 +61,7 @@ namespace atbash
  
 
 
-            Console.WriteLine(dencription(i));
+            
         }
 
         static string  Warning(string mesage, int points) 
@@ -70,19 +70,30 @@ namespace atbash
             string warning = "";
             if (points >= 1 && points <= 5)
             {
-                warning = "WARNING";
+                warning = "WARNING ";
             }
             else if (points >= 6 && points <= 10)
             {
-                warning = "DANGER";
+                warning = "DANGER ";
             }
             else if (points >= 11)
             {
-                warning = "ULTRA ALERT";
+                warning = "ULTRA ALERT ";
             }
             finalMesagge += mesage += warning += points + "";
 
             return finalMesagge;
+        }
+
+        static string manager()
+        {
+            string o = "Lfi ulixvh ziv kivkzirmt uli z nzqli zggzxp lm gsv Arlmrhg vmvnb.\r\nGsv ilxpvg fmrgh ziv ivzwb zmw dzrgrmt uli gsv hrtmzo.\r\nYlnyh szev yvvm kozxvw mvzi pvb olxzgrlmh.\r\nMfpsyz urtsgvih ziv hgzmwrmt yb uli tilfmw rmurogizgrlm.\r\nGsv zggzxp droo yv hfwwvm zmw hgilmt -- gsvb dlm’g hvv rg xlnrmt.\r\nDv nfhg hgzb srwwvm zmw pvvk gsv kozm hvxivg fmgro gsv ozhg nlnvmg.\r\nErxglib rh mvzi. Hgzb ivzwb.";
+
+            string[] u = { "bomb", "nukhba", "fighter", "rocket", "secret" };
+            string g = dencription(o);
+            int y = dangerousWords(g,u);
+            string t = Warning (g,y);
+            return t;
         }
 
            
